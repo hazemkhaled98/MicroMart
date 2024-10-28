@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.micromart</groupId>
-	<artifactId>product-service</artifactId>
+	<artifactId>micromart-product-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>micromart-product-service</name>
 	<description>MicroMart Product Service </description>
