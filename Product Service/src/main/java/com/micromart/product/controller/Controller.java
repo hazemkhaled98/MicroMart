@@ -22,7 +22,7 @@ public class Controller {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product createProduct(@RequestBody ProductRequestDTO product) {
+    public String createProduct(@RequestBody ProductRequestDTO product) {
         return productService.createProduct(product);
     }
 

@@ -20,18 +20,18 @@ public class ProductService {
     private final ProductRepository productRepository;
 
 
-    public Product createProduct(ProductRequestDTO requestDTO) {
+    public String createProduct(ProductRequestDTO requestDTO) {
         Product newProduct = ProductMapper.toProduct(requestDTO);
         Product createdProduct = productRepository.save(newProduct);
         log.info("Product created: {}", createdProduct);
-        return createdProduct;
+        return "Product created successfully";
     }
 
 
     public List<ProductResponseDTO> getAllProducts() {
         List<Product> products = productRepository.findAll();
         List<ProductResponseDTO> responseDTO = ProductMapper.toResponseDTO(products);
-        log.info("Products retrieved");
+        log.info("Products retrieved. {}", responseDTO);
         return responseDTO;
     }
 }
