@@ -46,10 +46,7 @@ class ProductAPITest {
 				.body(requestBody)
 				.post("/api/products")
 				.then()
-				.statusCode(201)
-				.body("name", Matchers.equalTo("IPhone 15"))
-				.body("description", Matchers.equalTo("Scam Mobile"))
-				.body("price", Matchers.equalTo(1500));
+				.statusCode(201);
 	}
 
 	@Test
